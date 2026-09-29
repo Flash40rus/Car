@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поймай пончик</title>
+    <style>
+        /* Общие стили страницы */
+        body {
+            margin: 0;
+            overflow: hidden; /* Убираем полосы прокрутки */
+            background-color: #87CEEB; /* Небесно-голубой фон */
+            font-family: Arial, sans-serif;
+            user-select: none; /* Запрет выделения текста */
+        }
+
+        /* Игровое поле */
+        #game-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Корзина (управляется пальцем) */
+        #basket {
+            position: absolute;
+            bottom: 20px;
+            width: 100px;
+            height: 60px;
+            background-color: #8B4513; /* Коричневый цвет */
+            border-radius: 0 0 30px 30px; /* Форма корзины */
+            border: 4px solid #654321;
+            box-sizing: border-box;
+        }
+
+        /* Пончик */
+        .donut {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #FFB6C1; /* Розовый */
+            border-radius: 50%;
+            border: 5px solid #FF69B4; /* Яркая глазурь */
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            color: white;
+        }
+
+        /* Счетчик очков */
+        #score {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div id="score">Очки: 0</div>
+<div id="game-container">
+    <div id="basket"></div>
+</div>
+
+<script>
+    // --- Переменные ---
+    const basket = document.
